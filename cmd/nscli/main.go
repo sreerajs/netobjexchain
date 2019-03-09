@@ -20,14 +20,14 @@ import (
 	auth "github.com/cosmos/cosmos-sdk/x/auth/client/rest"
 	bankcmd "github.com/cosmos/cosmos-sdk/x/bank/client/cli"
 	bank "github.com/cosmos/cosmos-sdk/x/bank/client/rest"
-	app "github.com/cosmos/sdk-application-tutorial"
-	nsclient "github.com/cosmos/sdk-application-tutorial/x/nameservice/client"
-	nsrest "github.com/cosmos/sdk-application-tutorial/x/nameservice/client/rest"
+	app "github.com/sreerajs/netobjexchain"
+	nsclient "github.com/cosmos/sdk-application-tutorial/x/assetservice/client"
+	nsrest "github.com/cosmos/sdk-application-tutorial/x/assetservice/client/rest"
 )
 
 const (
 	storeAcc = "acc"
-	storeNS  = "nameservice"
+	storeNS  = "assetservice"
 )
 
 var defaultCLIHome = os.ExpandEnv("$HOME/.nscli")
@@ -50,7 +50,7 @@ func main() {
 
 	rootCmd := &cobra.Command{
 		Use:   "nscli",
-		Short: "nameservice Client",
+		Short: "assetservice Client",
 	}
 
 	// Add --chain-id to persistent flags and mark it required
