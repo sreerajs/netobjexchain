@@ -46,7 +46,7 @@ func handleMsgBuyAsset(ctx sdk.Context, keeper Keeper, msg MsgBuyAsset) sdk.Resu
 			return sdk.ErrInsufficientCoins("Buyer does not have enough coins").Result()
 		}
 	}
-	keeper.SetOwner(ctx, msg.Name, msg.Buyer)
-	keeper.SetPrice(ctx, msg.Name, msg.Bid)
+	keeper.SetOwner(ctx, msg.Asset, msg.Buyer)
+	keeper.SetPrice(ctx, msg.Asset, msg.Bid)
 	return sdk.Result{}
 }

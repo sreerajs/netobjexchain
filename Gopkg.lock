@@ -253,7 +253,7 @@
   branch = "master"
   name = "github.com/sreerajs/netobjexchain"
   packages = [".","x/assetservice","x/assetservice/client","x/assetservice/client/cli","x/assetservice/client/rest"]
-  revision = "e03292005a2c852dcd2f3f3e38dcc680c0d2b742"
+  revision = "84b38b487b43c2c1e699785670ec32400302ee99"
 
 [[projects]]
   name = "github.com/stretchr/testify"

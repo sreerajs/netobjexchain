@@ -18,7 +18,7 @@ type Keeper struct {
 }
 
 // NewKeeper creates new instances of the assetservice Keeper
-func NewKeeper(coinKeeper bank.Keeper, assetStoreKey sdk.StoreKey, ownersStoreKey sdk.StoreKey, priceStoreKey sdk.StoreKey, cdc *codec.Codec) Keeper {
+func NewKeeper(coinKeeper bank.Keeper, assetsStoreKey sdk.StoreKey, ownersStoreKey sdk.StoreKey, priceStoreKey sdk.StoreKey, cdc *codec.Codec) Keeper {
 	return Keeper{
 		coinKeeper:     coinKeeper,
 		assetsStoreKey:  assetsStoreKey,

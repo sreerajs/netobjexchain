@@ -29,7 +29,7 @@ func NewQuerier(keeper Keeper) sdk.Querier {
 
 // nolint: unparam
 func queryResolve(ctx sdk.Context, path []string, req abci.RequestQuery, keeper Keeper) (res []byte, err sdk.Error) {
-	name := path[0]
+	asset := path[0]
 
 	value := keeper.ResolveAsset(ctx, asset)
 
@@ -49,7 +49,7 @@ type Whois struct {
 
 // nolint: unparam
 func queryWhois(ctx sdk.Context, path []string, req abci.RequestQuery, keeper Keeper) (res []byte, err sdk.Error) {
-	name := path[0]
+	asset := path[0]
 
 	whois := Whois{}
 
